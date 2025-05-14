@@ -1,0 +1,85 @@
+[
+    {
+        "Street Address": "843 N 200 W, #25",
+        "City/State": "Nephi, UT 84648",
+        "MLS": "",
+        "Status": "Under Contract",
+        "Est Completion": "Move-in Ready",
+        "Price": "$389,900"
+    },
+    {
+        "Street Address": "804 N 200 W, #18",
+        "City/State": "Nephi, UT 84648",
+        "MLS": "",
+        "Status": "Available",
+        "Est Completion": "Move-in Ready",
+        "Price": "$389,900"
+    },
+    {
+        "Street Address": "808 N 200 W, #17",
+        "City/State": "Nephi, UT 84648",
+        "MLS": "https://www.utahrealestate.com/2061180",
+        "Status": "Available",
+        "Est Completion": "Move-in Ready",
+        "Price": "$389,900"
+    },
+    {
+        "Street Address": "812 N 200 W, #16",
+        "City/State": "Nephi, UT 84648",
+        "MLS": "https://www.utahrealestate.com/2068843",
+        "Status": "Available",
+        "Est Completion": "Move-in Ready",
+        "Price": "$389,900"
+    },
+    {
+        "Street Address": "220 W 815 N, #22",
+        "City/State": "Nephi, UT 84648",
+        "MLS": "",
+        "Status": "Available",
+        "Est Completion": "May 15",
+        "Price": "$399,900"
+    },
+    {
+        "Street Address": "216 W 815 N, #23",
+        "City/State": "Nephi, UT 84648",
+        "MLS": "",
+        "Status": "Available",
+        "Est Completion": "May 15",
+        "Price": "$399,900"
+    },
+    {
+        "Street Address": "210 W 815 N, #24",
+        "City/State": "Nephi, UT 84648",
+        "MLS": "",
+        "Status": "Available",
+        "Est Completion": "May 15",
+        "Price": "$399,900"
+    },
+    {
+        "Street Address": "211 W 815 N, #19",
+        "City/State": "Nephi, UT 84648",
+        "MLS": "",
+        "Status": "Available",
+        "Est Completion": "June 15",
+        "Price": "$399,900"
+    },
+    {
+        "Street Address": "217 W 815 N, #20",
+        "City/State": "Nephi, UT 84648",
+        "MLS": "",
+        "Status": "Available",
+        "Est Completion": "June 15",
+        "Price": "$399,900"
+    },
+    {
+        "Street Address": "221 W 815 N, #21",
+        "City/State": "Nephi, UT 84648",
+        "MLS": "",
+        "Status": "Available",
+        "Est Completion": "June 15",
+        "Price": "$399,900"
+    }
+
+
+
+]
