@@ -6,7 +6,7 @@ require_once __DIR__ . '/protected/functions.php';
 require_once __DIR__ . '/protected/configs.php';  // defines $page from REQUEST_URI
 
 // 2) Whitelist your slugs
-$allowedPages = ['home','contact-us','services', 'pricing', 'mail-form','404','priority-homes', 'the-katalyst-difference'];
+$allowedPages = ['home','contact-us','services', 'pricing', 'mail-form','404','priority-homes', 'our-model'];
 if (!in_array($page, $allowedPages, true)) {
     http_response_code(404);
     $page = '404';

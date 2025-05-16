@@ -18,6 +18,7 @@ define('BASE_URL',           rtrim(
     ),
     '/'
 ));
+define('IMAGES', BASE_URL . '/images');
 
 // ───────────────────────────────────────────────────────────────────────────────
 // 2) REQUEST SLUG (no “.php” or “.json” — let your front-controller decide)
@@ -34,7 +35,7 @@ $page    = preg_replace('/[^a-zA-Z0-9_-]/', '', $slug);
 // ───────────────────────────────────────────────────────────────────────────────
 // 3) SITE-SPECIFIC SETTINGS
 // ───────────────────────────────────────────────────────────────────────────────
-define('COMPANY_NAME',       'The Katalyst Group');
+define('COMPANY_NAME',       'TheKatalystGroup');
 define('COMPANY_PHONE',      '(385) 323-2290');
 define('CONTACT_EMAIL',      'kemish@tbcutah.com');
 

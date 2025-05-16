@@ -11,7 +11,7 @@
             $metaTag = 'Explore our range of services designed to enhance your home building business, from branding to sales strategy, all tailored for the Utah market.';
             break;
         case 'services':
-            $pageTitle = 'Comprehensive Marketing &amp; Sales Services for Utah Home Builders';
+            $pageTitle = 'Comprehensive Marketing & Sales Services for Utah Home Builders';
             $metaTag = 'Comprehensive Marketing & Sales Services for Utah Home Builders';
             break;
         case 'pricing':
@@ -19,7 +19,7 @@
             $metaTag = 'Understand our straightforward pricing model designed to provide maximum value for Utah home builders seeking marketing and sales support.';
         break;
         case 'contact-us':
-            $pageTitle = 'Connect with TheKatalyst.Group&mdash;Your Utah Home Builder Partner';
+            $pageTitle = 'Connect with TheKatalyst.Group - Your Utah Home Builder Partner';
             $metaTag = 'Reach out to discuss how our marketing and sales solutions can elevate your home building business in Utah.';
             break;
         default:
@@ -46,8 +46,8 @@
     <main>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm">
   <div class="container">
-    <a class="navbar-brand fw-bold text-uppercase" href="/">
-      <img src="/images/logo-white.webp" alt="Logo" height="95" class="me-2">
+    <a class="navbar-brand fw-bold text-uppercase" href="<?php echo BASE_URL; ?>">
+      <img src="<?php echo IMAGES; ?>/logo-white.webp" alt="Logo" height="95" class="me-2">
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -58,16 +58,19 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'home') ? 'active' : ''; ?>" href="/">Home</a>
+          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'home') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'services') ? 'active' : ''; ?>" href="/services">Services</a>
+          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'services') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/services">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'pricing') ? 'active' : ''; ?>" href="/pricing">Pricing</a>
+          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'our-model') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/our-model">Our Model</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'contact-us') ? 'active' : ''; ?>" href="/contact-us">Contact</a>
+          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'pricing') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/pricing">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'contact-us') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/contact-us">Contact</a>
         </li>
       </ul>
     </div>

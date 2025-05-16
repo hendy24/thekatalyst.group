@@ -1,72 +1,72 @@
 <!-- Hero Section -->
-<section class="text-center py-5">
-    <div class="container">
-        <h1 class="display-4">Tailored Services to Amplify Your Home Building Business</h1>
-        <p class="lead">Explore our range of services designed to aplify your home building business, from branding to sales strategy, all tailored for the Utah market.</p>
-    </div>
+<section class="text-center d-flex align-items-center justify-content-center">
+  <div class="container">
+    <h1 class="display-5">Home Builder Marketing Services That Drive Results</h1>
+    <p class="lead mt-3">We deliver strategy, marketing, and real estate sales support—designed exclusively for Utah builders ready to scale.</p>
+  </div>
 </section>
 
 <!-- Strategy Section -->
-<section class="pb-5">
+<section class="py-5 bg-light">
     <div class="container">
-        <div class="row align-items-center">
-        <div class="col-md-6">
-            <img src="../images/strategy-section.webp" class="img-fluid rounded" alt="Strategy Image">
-        </div>
-        <div class="col-md-6">
-            <h2>Strategic Planning for Real Results</h2>
-            <p>We collaborate as your strategic partners to deeply understand your target market and demographic, create research-driven marketing plans, design thoughtful release schedules, pricing strategies, and visually compelling branding.</p>
-            <ul>
-                <li>Market Research</li>
-                <li>Marketing Plan Development</li>
-                <li>Product Launch & Release Schedules</li>
-                <li>Buyer Psychology & Design Strategy</li>
-            </ul>
-        </div>
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <h2 class="fw-bold">Strategic Planning for New Construction Sales Success</h2>
+                <p class="mt-3">Every community deserves a launch plan that&#39;s intentional, local, and tailored. We partner with builders to create data-backed strategies that increase buyer engagement and accelerate absorption.</p>
+                <ul class="list-unstyled mt-3">
+                    <li>✅ Market research & buyer profiling</li>
+                    <li>✅ Localized pricing and absorption strategy</li>
+                    <li>✅ Floorplan positioning & product release schedules</li>
+                    <li>✅ Community branding & amenity highlights</li>
+                </ul>            
+            </div>
+            <div class="col-lg-6">
+                <img src="<?php echo IMAGES; ?>/strategy-section.webp" class="img-fluid rounded shadow" alt="Strategy">
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Marketing Section -->
-<section class="bg-light my-5 py-5">
+<section class="py-5">
     <div class="container">
-        <div class="row align-items-center">
-        <div class="col-md-6 order-md-2">
-            <img src="../images/marketing-section.webp" class="img-fluid rounded" alt="Marketing Image">
-        </div>
-        <div class="col-md-6 order-md-1">
-            <h2>Full-Spectrum Marketing Services</h2>
-            <p>We manage all aspects of real estate marketing so your listings stand out and convert.</p>
-            <ul>
-            <li>Social Media & Paid Ads</li>
-            <li>Email Campaigns</li>
-            <li>Website &amp; Landing Pages</li>
-            <li>Print Materials &amp; Signage</li>
-            <li>Photography, Video &amp; Virtual Tours</li>
-            </ul>
-        </div>
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <h2 class="fw-bold">Real Estate Marketing for Builders—All Under One Roof</h2>
+                <p class="mt-3">We manage every touchpoint across your digital and physical presence. Our full-service approach eliminates gaps, aligns with your sales goals, and builds a consistent brand across every channel.</p>
+                <ul class="list-unstyled mt-3">
+                    <li>📣 Social media content &amp; advertising</li>
+                    <li>📧 Targeted email campaigns</li>
+                    <li>🌐 Builder websites, landing pages &amp; lead capture</li>
+                    <li>🖨️ Custom signage, flyers &amp; print collateral</li>
+                    <li>🎥 Drone footage, video tours &amp; professional photography</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <img src="<?php echo IMAGES; ?>/marketing-section.webp" class="img-fluid rounded shadow" alt="Marketing">
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Sales Section -->
-<section class="py-5">
+<section class="py-5 bg-light">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <img src="../images/exterior-section.webp" class="img-fluid rounded" alt="Sales Image">
-            </div>
-            <div class="col-md-6">
-                <h2>Sales Execution & Real Estate Expertise</h2>
-                <p>We offer end-to-end real estate services to ensure your transaction is seamless and successful.</p>
-                <ul>
-                    <li>Whitelabel Services</li>
-                    <li>MLS Listings &amp; Syndication</li>
-                    <li>Negotiations &amp; Offers</li>
-                    <li>Contract Management</li>
-                    <li>Pre-Closing Walk-Throughs</li>
-                    <li>Closing Coordination</li>
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <h2 class="fw-bold">Flat-Fee Real Estate Sales Support That Scales</h2>
+                <p class="mt-3">We’re not agents chasing commissions—we’re embedded sales partners helping you sell more homes at scale. Our flat-fee model gives you expert representation and systems without the traditional markup.</p>
+                <ul class="list-unstyled mt-3">
+                    <li>🏷️ Whitelabeled on-site agent representation</li>
+                    <li>📊 MLS listing, syndication & listing optimization</li>
+                    <li>🤝 Buyer communication, offer handling & negotiation</li>
+                    <li>📝 Contract and document coordination</li>
+                    <li>🏡 Walkthrough scheduling & buyer liaison</li>
+                    <li>🔐 Seamless closing coordination with all parties</li>
                 </ul>
+            </div>
+            <div class="col-lg-6">
+                <img src="<?php echo IMAGES; ?>/exterior-section.webp" class="img-fluid rounded shadow" alt="Sales">
             </div>
         </div>
     </div>
