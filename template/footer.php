@@ -9,8 +9,10 @@
 
                 <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                     <h3 class="text-orange display-6">Call Us At</h3>
-                    <h2 class="display-4">385.323.2290</h2>
-                    <p class="mt-2">Follow us:</p>
+                    <h2 class="display-5">385.323.2290</h2>
+                    <!-- <p class="mt-2">Follow us:</p>
+                    <img src="../images/icons/instagram.webp" alt="Instagram">
+                    <img src="../images/icons/facebook.webp" alt="Facebook"> -->
                 </div>
 
                 <div class="col-lg-4 col-md-12">
@@ -18,7 +20,7 @@
                 </div>
             </div>
 
-            <p class="mb-0 text-light-grey small">
+            <p class="mb-0 text-grey small">
                 &copy; <?php echo date('Y'); ?> The Katalyst Group, LLC. &nbsp;All rights reserved.<br>
                 State Brokerage Name: Real Broker, LLC
             </p>
