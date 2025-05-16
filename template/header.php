@@ -7,19 +7,23 @@
 
     switch ($requestPath) {
         case 'home':
-            $pageTitle = 'Utah New Construction Experts';
+            $pageTitle = 'Utah\'s Premier Real Estate Marketing & Sales Partner for Home Builders';
+            $metaTag = 'Explore our range of services designed to enhance your home building business, from branding to sales strategy, all tailored for the Utah market.';
             break;
         case 'services':
-            $pageTitle = 'Our Services - Builder Marketing &amp; Sales';
+            $pageTitle = 'Comprehensive Marketing &amp; Sales Services for Utah Home Builders';
+            $metaTag = 'Comprehensive Marketing & Sales Services for Utah Home Builders';
             break;
         case 'pricing':
-            $pageTitle = 'Pricing – Flat-Rate Builder Sales Model';
+            $pageTitle = 'Transparent, Flat-Fee Pricing for Home Builder Marketing Services';
+            $metaTag = 'Understand our straightforward pricing model designed to provide maximum value for Utah home builders seeking marketing and sales support.';
         break;
         case 'contact-us':
-            $pageTitle = 'Contact The Katalyst Group';
+            $pageTitle = 'Connect with TheKatalyst.Group&mdash;Your Utah Home Builder Partner';
+            $metaTag = 'Reach out to discuss how our marketing and sales solutions can elevate your home building business in Utah.';
             break;
         default:
-            $pageTitle = 'The Katalyst Group';
+            $pageTitle = 'TheKatalyst.Group';
             break;
     }
 ?>
@@ -30,6 +34,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<?php echo htmlspecialchars($metaTag); ?>">
+
     <title><?php echo htmlspecialchars($pageTitle); ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">    <link rel="stylesheet" type="text/css" href="styles/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script></head>

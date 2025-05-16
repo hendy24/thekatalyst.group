@@ -12,9 +12,9 @@
 
 <div class="container mt-5">
     <div class="text-center py-5 bg-light rounded">
-        <h1 class="fw-bold">Real marketing. Real sales. Built to move homes.</h1>
-        <p class="lead">
-        We’re <strong>not just listing homes</strong>. We’re <strong>helping builders brand</strong> communities, sell faster, and at a <strong>substantially lower cost</strong> than traditional real estate sales &mdash; built for scale.
+        <h1 class="fw-bold">Transforming Home Builder Sales with Strategic Marketing Solutions</h1>
+        <p class="lead my-5">
+            At The<span class="text-orange">Katalyst</span>.Group, we specialize in providing Utah home builders with comprehensive marketing and sales strategies that drive results. Our commission-free model ensures you retain more profit while benefiting from expert branding, targeted advertising, and dedicated sales support.
         </p>
         <a href="the-katalyst-difference" class="btn btn-primary btn-lg">What Makes Us Different?</a>
     </div>

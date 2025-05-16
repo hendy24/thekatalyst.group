@@ -1,8 +1,8 @@
 <!-- Hero Section -->
 <section class="text-center py-5">
     <div class="container">
-        <h1 class="display-4">Strategy. Marketing. Sales. Simplified</h1>
-        <p class="lead">We amplify your business goals&mdash;backed by insight, research, creativity, and execution.</p>
+        <h1 class="display-4">Tailored Services to Amplify Your Home Building Business</h1>
+        <p class="lead">Explore our range of services designed to aplify your home building business, from branding to sales strategy, all tailored for the Utah market.</p>
     </div>
 </section>
 
