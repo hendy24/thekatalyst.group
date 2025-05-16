@@ -1,22 +1,23 @@
-<form id="contact-form" class="needs-validation" action="mail-form">
-    <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+<form id="contact-form" class="needs-validation bg-white p-4 p-md-5 rounded shadow-sm" action="mail-form" novalidate>
+    <div class="mb-4">
+        <label for="name" class="form-label fw-semibold">Name</label>
+        <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Your Name" required>
+        <div class="invalid-feedback">Please enter your name.</div>
     </div>
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
-    </div>
-    <!-- <div class="form-group">
-        <label for="location">City</label>
-        <input type="text" class="form-control" id="location" name="location" placeholder="City">
-    </div> -->
 
-    <div class="form-group">
-        <label for="message">Message</label>
-            <textarea class="form-control" id="message" rows="5" name="message" placeholder="Let's talk about how we can help you build more homes..."></textarea>
+    <div class="mb-4">
+        <label for="email" class="form-label fw-semibold">Email</label>
+        <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Your Email" required>
+        <div class="invalid-feedback">Please enter a valid email address.</div>
     </div>
-    <div class="d-flex justify-content-end mt-5">
-        <button type="submit" class="btn btn-primary">Submit</button>
+
+    <div class="mb-4">
+        <label for="message" class="form-label fw-semibold">Message</label>
+        <textarea class="form-control form-control-lg" id="message" name="message" rows="5" placeholder="Enter your message..." required></textarea>
+        <div class="invalid-feedback">Please enter a message.</div>
+    </div>
+
+    <div class="text-end mt-4">
+        <button type="submit" class="btn btn-primary btn-lg px-4">Submit</button>
     </div>
 </form>

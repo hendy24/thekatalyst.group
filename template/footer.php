@@ -1,10 +1,10 @@
     </main>
     <!-- Footer below -->
-    <footer class="bg-dark text-white text-center py-5 mt-5">
+    <footer class="bg-dark text-white text-center py-5">
         <div class="container">
             <div class="row align-items-center mb-4">
                 <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                    <img src="../images/logo-white.webp" class="img-fluid" style="max-width: 70%;" alt="The Katalyst Group Logo">
+                    <img src="<?php echo IMAGES; ?>/logo-white.webp" class="img-fluid" style="max-width: 70%;" alt="The Katalyst Group Logo">
                 </div>
 
                 <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="col-lg-4 col-md-12">
-                    <img src="../images/real_logo.webp" class="img-fluid" style="max-height: 100px;" alt="Real Broker Logo">
+                    <img src="<?php echo IMAGES; ?>/real_logo.webp" class="img-fluid" style="max-height: 100px;" alt="Real Broker Logo">
                 </div>
             </div>
 
