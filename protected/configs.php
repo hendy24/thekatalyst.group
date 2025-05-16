@@ -34,7 +34,7 @@ $page    = preg_replace('/[^a-zA-Z0-9_-]/', '', $slug);
 // ───────────────────────────────────────────────────────────────────────────────
 // 3) SITE-SPECIFIC SETTINGS
 // ───────────────────────────────────────────────────────────────────────────────
-define('COMPANY_NAME',       'TBC Real Estate');
+define('COMPANY_NAME',       'The Katalyst Group');
 define('COMPANY_PHONE',      '(385) 323-2290');
 define('CONTACT_EMAIL',      'kemish@tbcutah.com');
 
