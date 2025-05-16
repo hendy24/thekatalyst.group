@@ -14,8 +14,9 @@
 
     <div class="form-group">
         <label for="message">Message</label>
-            <textarea class="form-control" id="message" rows="5" name="message" placeholder="Tell me a little about how we might be able to help..."></textarea>
+            <textarea class="form-control" id="message" rows="5" name="message" placeholder="Let's talk about how we can help you build more homes..."></textarea>
     </div>
-    <input type="text" name="website" style="display:none">
-    <button type="submit" class="btn btn-info float-right">Submit</button>
+    <div class="d-flex justify-content-end mt-5">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
 </form>

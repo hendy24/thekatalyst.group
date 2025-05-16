@@ -7,7 +7,7 @@
 </section>
 
 <!-- Strategy Section -->
-<section class="py-5">
+<section class="pb-5">
     <div class="container">
         <div class="row align-items-center">
         <div class="col-md-6">
@@ -28,7 +28,7 @@
 </section>
 
 <!-- Marketing Section -->
-<section class="bg-light py-5">
+<section class="bg-light my-5 py-5">
     <div class="container">
         <div class="row align-items-center">
         <div class="col-md-6 order-md-2">
