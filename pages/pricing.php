@@ -57,14 +57,15 @@
             <div class="card border-0 shadow h-100">
                 <div class="card-body d-flex flex-column">
                     <h5 class="display-5 fw-bold">Elite</h5>
-                    <p class="fs-1 fw-semibold text-orange my-3">$24,500<span class="fs-5 fw-normal">/month</span></p>
+                    <p class="fs-1 fw-semibold text-orange my-3">$26,500<span class="fs-5 fw-normal">/month</span></p>
                     <hr>
                     <ul class="list-unstyled text-start">
                         <li>✔ Full Service Strategy</li>
                         <li>✔ Full Service Marketing</li>
                         <li>✔ Full Service Sales</li>
+                        <li>✔ Sales Staff for One Model Home</li>
                     </ul>
-                    <p class="text-muted mt-3">Best for builders actively selling <strong>6–10 homes</strong> per month.</p>
+                    <p class="text-muted mt-3">Best for builders actively selling <strong>6–8 homes</strong> per month.</p>
                     <div class="mt-auto">
                     <a href="#" class="btn btn-outline-primary btn-lg w-100 mt-4">Choose Elite</a>
                     </div>
@@ -79,7 +80,7 @@
 <section class="bg-light text-center">
     <div class="container my-5">
         <div class="text-center">
-            <h2 class="fw-bold">Real Estate Marketing for Builders&mdash;Without the Commission Bloat</h2>
+            <h2 class="fw-bold">Real Estate Sales for Builders&mdash;Without the Commission</h2>
             <p class="lead mt-3">
             We combine professional home builder marketing services with sales execution—so you don&#39;t have to piece it together or pay 3% commissions.
             </p>    
@@ -198,12 +199,12 @@
     } else if (homesPerMonth <= 5) {
       tier = 'Growth';
       newCost = 14500;
-    } else if (homesPerMonth <= 10) {
+    } else if (homesPerMonth <= 8) {
       tier = 'Elite';
-      newCost = 24500;
+      newCost = 26500;
     } else {
       tier = 'Custom';
-      newCost = 24500 + (homesPerMonth - 10) * 2500;
+      newCost = 26500 + (homesPerMonth - 8) * 2500;
     }
 
     const monthlySavings = currentCost - newCost;
