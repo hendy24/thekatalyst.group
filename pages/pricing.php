@@ -194,16 +194,16 @@
 
     if (homesPerMonth <= 2) {
       tier = 'Core';
-      newCost = 7495;
+      newCost = 7500;
     } else if (homesPerMonth <= 5) {
       tier = 'Growth';
-      newCost = 14495;
+      newCost = 14500;
     } else if (homesPerMonth <= 10) {
       tier = 'Elite';
-      newCost = 24495;
+      newCost = 24500;
     } else {
       tier = 'Custom';
-      newCost = 24495 + (homesPerMonth - 10) * 2500;
+      newCost = 24500 + (homesPerMonth - 10) * 2500;
     }
 
     const monthlySavings = currentCost - newCost;
