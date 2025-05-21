@@ -14,6 +14,15 @@ if (!file_exists($standardContent) && !file_exists($landingContent)) {
     $page = '404';
 }
 
+// set the path for navigation menu
+$requestPath = basename($_SERVER['REQUEST_URI']);
+
+// set to home page if empty
+if ($requestPath == '') {
+    $requestPath = 'home';
+}
+
+
 // 3) Page Titles and Meta (optional)
 switch ($page) {
     case 'home':
