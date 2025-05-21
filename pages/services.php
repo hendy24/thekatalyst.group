@@ -54,8 +54,8 @@
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6">
-                <h2 class="fw-bold">Flat-Fee Real Estate Sales Support That Scales</h2>
-                <p class="mt-3">We’re not agents chasing commissions—we’re embedded sales partners helping you sell more homes at scale. Our flat-fee model gives you expert representation and systems without the traditional markup.</p>
+                <h2 class="fw-bold">Sales Support That Works Like a Partner, Not a Percentage</h2>
+                <p class="mt-3">We’re not agents chasing commissions—we’re embedded sales partners helping you sell more homes at scale. Our simple model gives you expert representation and systems without the traditional markup.</p>
                 <ul class="list-unstyled mt-3">
                     <li>🏷️ Whitelabeled on-site agent representation</li>
                     <li>📊 MLS listing, syndication & listing optimization</li>

@@ -1,7 +1,7 @@
 <!-- Pricing Page Header -->
 <section class="text-center py-5">
   <div class="container">
-    <h1 class="display-5">Flat-Fee Pricing for Builders Ready to Scale</h1>
+    <h1 class="display-5">Ditch the Commission. Embrace Builder-Aligned Pricing.</h1>
     <p class="lead">Real estate marketing and sales support built for builders&mdash;not agents. No commissions. Just results.</p>
     <p class="lead mt-5 mb-0 text-muted">Whether you're selling two homes or ten, our plans give you full-service strategy, marketing, and sales at a predictable monthly rate. Choose the tier that matches your monthly inventory—then build with confidence.</p>
   </div>
@@ -57,7 +57,7 @@
             <div class="card border-0 shadow h-100">
                 <div class="card-body d-flex flex-column">
                     <h5 class="display-5 fw-bold">Elite</h5>
-                    <p class="fs-1 fw-semibold text-orange my-3">$26,500<span class="fs-5 fw-normal">/month</span></p>
+                    <p class="fs-1 fw-semibold text-orange my-3">$34,500<span class="fs-5 fw-normal">/month</span></p>
                     <hr>
                     <ul class="list-unstyled text-start">
                         <li>✔ Full Service Strategy</li>
@@ -105,7 +105,7 @@
           Sell 10 homes? That's <strong>$150,000 in commission fees.</strong>
         </p>
         <p class="mt-4 text-center text-lg-start">
-          Our flat-fee pricing gives you full-service strategy, marketing, and sales—at a fraction of the cost.<br>
+          Our simple pricing gives you full-service strategy, marketing, and sales—at a fraction of the cost.<br>
           <strong>No commissions. No hidden fees. Just aligned incentives and measurable results.</strong>
         </p>
       </div>
@@ -129,11 +129,11 @@
   <div class="container text-center">
     <h2 class="fw-bold mb-3">Estimate Your Monthly and Annual Savings</h2>
     <p class="lead text-muted">
-      Use the calculator below to compare your current commission costs against our flat-fee pricing model.
+      Use the calculator below to compare your current commission costs against our simple pricing model.
       Just enter your average home price, typical seller commission, and the number of homes you sell per month.
     </p>
     <p class="mt-3">
-      You'll see how much you could save each month—and how much more you can reinvest into your community.
+      You'll see how much you could save each month—and how much more you can reinvest into building communities.
     </p>
         <div class="row mt-5 mb-0 justify-content-center">
             <div class="col-lg-8">
@@ -164,7 +164,7 @@
                         <div class="mt-4 p-4 bg-body-tertiary border rounded" id="results" style="display: none;">
                             <h5 class="mb-3 text-success">Results</h5>
                             <p><strong>Current Commission Cost:</strong> <span id="currentCost"></span> / month</p>
-                            <p><strong>New Flat Monthly Fee:</strong> <span id="newCost"></span></p>
+                            <p><strong>New Monthly Fee:</strong> <span id="newCost"></span></p>
                             <p><strong>Monthly Savings:</strong> <span id="monthlySavings"></span></p>
                             <p><strong>Annual Savings:</strong> <span id="annualSavings"></span></p>
                             <p><strong>Pricing Tier:</strong> <span id="tier" class="text-primary"></span></p>
@@ -201,10 +201,10 @@
       newCost = 14500;
     } else if (homesPerMonth <= 8) {
       tier = 'Elite';
-      newCost = 26500;
+      newCost = 34500;
     } else {
       tier = 'Custom';
-      newCost = 26500 + (homesPerMonth - 8) * 2500;
+      newCost = 34500 + (homesPerMonth - 8) * 2500;
     }
 
     const monthlySavings = currentCost - newCost;

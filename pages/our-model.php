@@ -3,7 +3,7 @@
     <div class="text-center mb-5">
       <h1 class="display-4">Our Model: The <span class="text-orange">Katalyst</span> Difference</h1>
       <p class="fs-5 text-muted w-lg-75 mx-auto">
-        We help home builders market and sell more homes—without paying traditional real estate commissions. Our flat-fee model is built for scale, alignment, and results.
+        We help home builders market and sell more homes—without paying traditional real estate commissions. Our simple model is built for scale, alignment, and results.
       </p>
     </div>
 </section>
@@ -53,7 +53,7 @@
     </div>
 </section>
 
-<!-- Flat-Fee Approach -->
+<!-- Simple Fee Approach -->
  <section class="bg-white mt-5">
     <div class="container">
         <div class="row align-items-center flex-lg-row-reverse mb-5">
