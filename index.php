@@ -6,19 +6,16 @@ require_once __DIR__ . '/protected/functions.php';
 require_once __DIR__ . '/protected/configs.php';  // defines $page from REQUEST_URI
 
 // 2) Whitelist your slugs
-$allowedPages = ['home','contact-us','services', 'pricing', 'mail-form','404','priority-homes', 'our-model'];
-if (!in_array($page, $allowedPages, true)) {
+$standardContent = __DIR__ . '/pages/' . $page . '.php';
+$landingContent  = __DIR__ . '/landing_pages/' . $page . '.php';
+
+if (!file_exists($standardContent) && !file_exists($landingContent)) {
     http_response_code(404);
     $page = '404';
 }
 
-$requestPath = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
-
-if ($requestPath === '') {
-    $requestPath = 'home';
-}
-
-switch ($requestPath) {
+// 3) Page Titles and Meta (optional)
+switch ($page) {
     case 'home':
         $pageTitle = 'Utah\'s Premier Real Estate Marketing & Sales Partner for Home Builders';
         $metaTag = 'Explore our range of services designed to enhance your home building business, from branding to sales strategy, all tailored for the Utah market.';
@@ -41,19 +38,16 @@ switch ($requestPath) {
 }
 
 
-// 3) Render
-require_once __DIR__ . '/template/header.php';
+// 4) Render
+$landingContent = __DIR__ . '/landing_pages/' . $page . '.php';
+$standardContent = __DIR__ . '/pages/' . $page . '.php';
 
-$content = __DIR__ . '/pages/' . $page . '.php';
-if (is_readable($content)) {
-    require $content;
+if (is_readable($landingContent)) {
+    require_once __DIR__ . '/template/landing-header.php';
+    require $landingContent;
+    require_once __DIR__ . '/template/landing-footer.php';
 } else {
-    $alt = __DIR__ . '/builders/' . $page . '.php';
-    if (is_readable($alt)) {
-        require $alt;
-    } else {
-        require __DIR__ . '/pages/404.php';
-    }
+    require_once __DIR__ . '/template/header.php';
+    require $standardContent;
+    require_once __DIR__ . '/template/footer.php';
 }
-
-require_once __DIR__ . '/template/footer.php';
