@@ -24,7 +24,7 @@
                         <li>✔ Full Service Marketing</li>
                         <li>✔ Full Service Sales</li>
                     </ul>
-                    <p class="text-muted mt-3">Designed for builders with <strong>1&ndash;2 active homes</strong> on the market.</p>
+                    <p class="text-muted mt-3">Designed for builders with <strong>0&ndash;2 average home sales</strong> per month.</p>
                     <div class="mt-auto">
                     <a href="#" class="btn btn-outline-primary btn-lg w-100 mt-4">Choose Core</a>
                     </div>
@@ -44,7 +44,7 @@
                         <li>✔ Full Service Marketing</li>
                         <li>✔ Full Service Sales</li>
                     </ul>
-                    <p class="text-muted mt-3">Ideal for teams managing <strong>3–5 active homes</strong> each month.</p>
+                    <p class="text-muted mt-3">Ideal for teams averaging <strong>3&ndash;5 home sales</strong> per month.</p>
                     <div class="mt-auto">
                     <a href="#" class="btn btn-outline-primary btn-lg w-100 mt-4">Choose Growth</a>
                     </div>
@@ -57,15 +57,14 @@
             <div class="card border-0 shadow h-100">
                 <div class="card-body d-flex flex-column">
                     <h5 class="display-5 fw-bold">Elite</h5>
-                    <p class="fs-1 fw-semibold text-orange my-3">$34,500<span class="fs-5 fw-normal">/month</span></p>
+                    <p class="fs-1 fw-semibold text-orange my-3">$25,500<span class="fs-5 fw-normal">/month</span></p>
                     <hr>
                     <ul class="list-unstyled text-start">
                         <li>✔ Full Service Strategy</li>
                         <li>✔ Full Service Marketing</li>
                         <li>✔ Full Service Sales</li>
-                        <li>✔ Sales Staff for One Model Home</li>
                     </ul>
-                    <p class="text-muted mt-3">Best for builders actively selling <strong>6–8 homes</strong> per month.</p>
+                    <p class="text-muted mt-3">Best for builders averaging <strong>6&ndash;8 home sales</strong> per month.</p>
                     <div class="mt-auto">
                     <a href="#" class="btn btn-outline-primary btn-lg w-100 mt-4">Choose Elite</a>
                     </div>
@@ -181,7 +180,7 @@
   function calculateSavings() {
     const homePrice = parseFloat(document.getElementById("homePrice").value);
     const commission = parseFloat(document.getElementById("commission").value) / 100;
-    const homesPerMonth = parseInt(document.getElementById("homesPerMonth").value);
+    const homesPerMonth = parseFloat(document.getElementById("homesPerMonth").value); // now supports decimals
 
     if (isNaN(homePrice) || isNaN(commission) || isNaN(homesPerMonth)) {
       alert("Please fill in all fields with valid numbers.");
@@ -201,10 +200,10 @@
       newCost = 14500;
     } else if (homesPerMonth <= 8) {
       tier = 'Elite';
-      newCost = 34500;
+      newCost = 25500;
     } else {
       tier = 'Custom';
-      newCost = 34500 + (homesPerMonth - 8) * 2500;
+      newCost = 25500 + (homesPerMonth - 8) * 2500;
     }
 
     const monthlySavings = currentCost - newCost;

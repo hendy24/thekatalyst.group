@@ -1,7 +1,7 @@
   <footer class="bg-body-tertiary text-center text-muted small py-4 border-top mt-5">
     <div class="container">
       <div>Powered by <a href="https://www.thekatalyst.group" target="_blank">TheKatalyst.Group</a></div>
-      <div class="mt-1">State Brokerage Name: <strong>Real Broker, LLC</strong></div>
+      <div class="mt-1"><strong>Real Broker, LLC</strong></div>
     </div>
   </footer>
 

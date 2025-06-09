@@ -49,11 +49,12 @@
           <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'home') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'services') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/services">Services</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'our-model') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/our-model">Our Model</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'services') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/services">Services</a>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'pricing') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/pricing">Pricing</a>
         </li>
