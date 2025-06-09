@@ -23,7 +23,7 @@
 
             <p class="mb-0 text-grey small">
                 &copy; <?php echo date('Y'); ?> The Katalyst Group, LLC. &nbsp;All rights reserved.<br>
-                State Brokerage Name: Real Broker, LLC
+                Real Broker, LLC
             </p>
         </div>
     </footer>
