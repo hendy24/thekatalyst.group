@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?php echo htmlspecialchars($metaTag); ?>">
+    <?php if (isset($metaTag2)) echo $metaTag2; ?>
 
     <title><?php echo htmlspecialchars($pageTitle); ?></title>
 
@@ -55,9 +56,6 @@
           <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'services') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/services">Services</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'pricing') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/pricing">Pricing</a>
-        </li>
         <li class="nav-item">
           <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'contact-us') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/contact-us">Contact</a>
         </li>

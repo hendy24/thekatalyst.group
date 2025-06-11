@@ -72,13 +72,3 @@
     </div>
 </section>
 
-<!-- CTA -->
-<section class="bg-white mt-0 pt-0">
-    <div class="container">
-        <div class="text-center mt-5">
-            <h3 class="fw-bold mb-3">What Does All This Cost?</h3>
-            <p class="fs-5 text-muted mb-4">Check out our commission-free pricing model.</p>
-            <a href="<?php echo BASE_URL; ?>/pricing" class="btn btn-primary btn-lg px-4">See Our Prices</a>
-        </div>
-    </div>
-</section>
