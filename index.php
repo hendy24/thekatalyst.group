@@ -36,6 +36,7 @@ switch ($page) {
     case 'pricing':
         $pageTitle = 'Transparent, Flat-Fee Pricing for Home Builder Marketing Services';
         $metaTag = 'Understand our straightforward pricing model designed to provide maximum value for Utah home builders seeking marketing and sales support.';
+        $metaTag2 = '<meta name="robots" content="noindex, nofollow">';
     break;
     case 'contact-us':
         $pageTitle = 'Connect with TheKatalyst.Group - Your Utah Home Builder Partner';
