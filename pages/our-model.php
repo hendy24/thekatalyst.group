@@ -3,7 +3,7 @@
     <div class="text-center mb-5">
       <h1 class="display-4">Our Model: The <span class="text-orange">Katalyst</span> Difference</h1>
       <p class="fs-5 text-muted w-lg-75 mx-auto">
-        We help home builders market and sell more homes—without paying traditional real estate commissions. Our simple model is built for scale, alignment, and results.
+        We are a <strong>builder-aligned sales platform</strong> that helps home builders expand their brand awareness, market, and sell homes—without paying traditional real estate commissions. Our simple model is built for scale, alignment, and results.
       </p>
     </div>
 </section>
@@ -21,7 +21,7 @@
       <div class="col-lg-6 order-lg-1">
         <h2 class="h4 fw-semibold mb-4 text-start">We’re Rewriting the Rules of Real Estate Sales</h2>
         <p class="text-muted mb-3">
-          You take the risk—financing the build, managing crews, and driving every home to completion. But when it's time to sell, traditional real estate models reward agents with inflated commissions, no matter how many homes you're moving.
+          You take the risk—financing the build, managing crews, and driving every home to completion. But when it's time to sell, traditional real estate models reward agents with large commissions, no matter how many homes you're moving.
         </p>
         <p class="text-muted mb-3">
           We flip the model. Instead of taking a cut of every sale, we offer full-service strategy, marketing, and sales for a predictable monthly rate—scaled to your level of activity. The more homes you sell, the more support we provide.

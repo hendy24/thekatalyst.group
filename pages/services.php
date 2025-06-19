@@ -1,8 +1,8 @@
 <!-- Hero Section -->
 <section class="text-center d-flex align-items-center justify-content-center">
   <div class="container">
-    <h1 class="display-5">Home Builder Marketing Services That Drive Results</h1>
-    <p class="lead mt-3">We deliver strategy, marketing, and real estate sales support—designed exclusively for Utah builders ready to scale.</p>
+    <h1 class="display-5">Home Builder Services That Drive Results</h1>
+    <p class="lead mt-3">We are a builder-aligned sales platform that delivers strategy, marketing, and real estate sales support—designed exclusively for Utah builders ready to scale.</p>
   </div>
 </section>
 
@@ -32,14 +32,13 @@
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 order-lg-2">
-                <h2 class="fw-bold">Real Estate Marketing for Builders—All Under One Roof</h2>
-                <p class="mt-3">We manage every touchpoint across your digital and physical presence. Our full-service approach eliminates gaps, aligns with your sales goals, and builds a consistent brand across every channel.</p>
+                <h2 class="fw-bold">Marketing that Builds Your Brand and Drives Sales</h2>
+                <p class="mt-3">We complement any existing marketing you already have in place. Our sales-focused marketing supports your new construction sales pipeline by creating consistent, branded content using your name, your logo, and your product. Every piece is designed to drive qualified buyers directly to your homes.</p>
                 <ul class="list-unstyled mt-3">
-                    <li>📣 Social media content &amp; advertising</li>
-                    <li>📧 Targeted email campaigns</li>
-                    <li>🌐 Builder websites, landing pages &amp; lead capture</li>
-                    <li>🖨️ Custom signage, flyers &amp; print collateral</li>
-                    <li>🎥 Drone footage, video tours &amp; professional photography</li>
+                    <li>📣 Ongoing social media content & advertising campaigns</li>
+                    <li>📧 Targeted email marketing to buyer lists and prospects</li>
+                    <li>🖨️ Custom signage, flyers, and branded print materials</li>
+                    <li>🎥 Drone footage, video tours, and professional photography (per floorplan & community)</li>
                 </ul>
             </div>
             <div class="col-lg-6 order-lg-1">
@@ -48,7 +47,6 @@
         </div>
     </div>
 </section>
-
 <!-- Sales Section -->
 <section class="py-5 bg-light">
     <div class="container">
