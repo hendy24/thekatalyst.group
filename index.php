@@ -5,7 +5,23 @@ declare(strict_types=1);
 require_once __DIR__ . '/protected/functions.php';
 require_once __DIR__ . '/protected/configs.php';  // defines $page from REQUEST_URI
 
-// 2) Whitelist your slugs
+// 2) Handle admin routes
+if (strpos($_SERVER['REQUEST_URI'], 'katalyst-core') !== false) {
+    $adminContent = __DIR__ . '/katalyst-core/' . $page . '.php';
+
+    if (!file_exists($adminContent)) {
+        http_response_code(404);
+        $page = '404';
+        $adminContent = __DIR__ . '/katalyst-core/404.php';
+    }
+
+    require_once __DIR__ . '/katalyst-core/template/kc-header.php';
+    require $adminContent;
+    require_once __DIR__ . '/katalyst-core/template/kc-footer.php';
+    exit; // prevent loading normal pages
+}
+
+// 3) Whitelist your slugs
 $standardContent = __DIR__ . '/pages/' . $page . '.php';
 $landingContent  = __DIR__ . '/landing_pages/' . $page . '.php';
 
@@ -23,7 +39,7 @@ if ($requestPath == '') {
 }
 
 
-// 3) Page Titles and Meta (optional)
+// 4) Page Titles and Meta (optional)
 switch ($page) {
     case 'home':
         $pageTitle = 'Utah\'s Premier Real Estate Marketing & Sales Partner for Home Builders';
@@ -48,7 +64,7 @@ switch ($page) {
 }
 
 
-// 4) Render
+// 5) Render
 $landingContent = __DIR__ . '/landing_pages/' . $page . '.php';
 $standardContent = __DIR__ . '/pages/' . $page . '.php';
 

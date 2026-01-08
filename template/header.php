@@ -50,14 +50,17 @@
           <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'home') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'our-model') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/our-model">Our Model</a>
+          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'new-construction-homes') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/new-construction-homes">New Construction Homes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'services') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/services">Services</a>
+          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'how-it-works') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/how-it-works">How it Works</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'why-us') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/why-us">Why Us</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'contact-us') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/contact-us">Contact</a>
+          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'contact-us') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/contact-us">Talk to a Specialist</a>
         </li>
       </ul>
     </div>

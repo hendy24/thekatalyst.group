@@ -18,7 +18,7 @@
       <div class="col">
         <div class="card border-0 shadow-sm h-100">
           <div class="card-body d-flex flex-column p-3">
-            <h5 class="fs-3 fw-bold">Tier 1</h5>
+            <h5 class="fs-3 fw-bold">Core</h5>
             <p class="fs-5 text-orange my-2">Starting at <strong>$4,500</strong><span class="fs-6 fw-normal">/month</span></p>
             <hr>
             <ul class="list-unstyled text-start small">
@@ -36,7 +36,7 @@
       <div class="col">
         <div class="card border-0 shadow-sm h-100">
           <div class="card-body d-flex flex-column p-3">
-            <h5 class="fs-3 fw-bold">Tier 2</h5>
+            <h5 class="fs-3 fw-bold">Growth</h5>
             <p class="fs-5 text-orange my-2">Starting at <strong>$8,750</strong><span class="fs-6 fw-normal">/month</span></p>
             <hr>
             <ul class="list-unstyled text-start small">
@@ -54,7 +54,7 @@
       <div class="col">
         <div class="card border-0 shadow-sm h-100">
           <div class="card-body d-flex flex-column p-3">
-            <h5 class="fs-3 fw-bold">Tier 3</h5>
+            <h5 class="fs-3 fw-bold">Pro</h5>
             <p class="fs-5 text-orange my-2">Starting at <strong>$12,500</strong><span class="fs-6 fw-normal">/month</span></p>
             <hr>
             <ul class="list-unstyled text-start small">
@@ -72,7 +72,7 @@
       <div class="col">
         <div class="card border-0 shadow-sm h-100">
           <div class="card-body d-flex flex-column p-3">
-            <h5 class="fs-3 fw-bold">Tier 4</h5>
+            <h5 class="fs-3 fw-bold">Elite</h5>
             <p class="fs-5 text-orange my-2">Starting at <strong>$20,000</strong><span class="fs-6 fw-normal">/month</span></p>
             <hr>
             <ul class="list-unstyled text-start small">
@@ -90,7 +90,7 @@
       <div class="col">
         <div class="card border-0 shadow-sm h-100">
           <div class="card-body d-flex flex-column p-3">
-            <h5 class="fs-3 fw-bold">Tier 5</h5>
+            <h5 class="fs-3 fw-bold">Premier</h5>
             <p class="fs-5 text-orange my-2">Starting at <strong>$30,000</strong><span class="fs-6 fw-normal">/month</span></p>
             <hr>
             <ul class="list-unstyled text-start small">

@@ -43,7 +43,7 @@ section {
   border: none;
 }
 .btn-orange:hover {
-  background-color: #c26200;
+  background-color: rgb(194, 98.187755102, 0);
 }
 
 @media (max-width: 768px) {
