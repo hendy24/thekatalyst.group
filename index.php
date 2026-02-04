@@ -45,9 +45,9 @@ switch ($page) {
         $pageTitle = 'Utah\'s Premier Real Estate Marketing & Sales Partner for Home Builders';
         $metaTag = 'Explore our range of services designed to enhance your home building business, from branding to sales strategy, all tailored for the Utah market.';
         break;
-    case 'services':
-        $pageTitle = 'Comprehensive Marketing & Sales Services for Utah Home Builders';
-        $metaTag = 'Comprehensive Marketing & Sales Services for Utah Home Builders';
+    case 'new-construction-homes':
+        $pageTitle = 'Utah New Construction Specialists';
+        $metaTag = 'Comprehensive Services for new home buyers';
         break;
     case 'pricing':
         $pageTitle = 'Transparent, Flat-Fee Pricing for Home Builder Marketing Services';

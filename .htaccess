@@ -1,10 +1,13 @@
 # Checks if the rewrite mod is on.
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    RewriteBase /
 
-    # Force everything through the index.php file
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
+    # Serve existing files/directories directly
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Everything else goes to the front controller
     RewriteRule ^ index.php [L]
-    RewriteRule ^([^\.]+)$ $1.php [NC,L]
 </IfModule>
