@@ -10,7 +10,7 @@
 
       <div class="d-flex flex-column flex-sm-row gap-3">
         <a href="#difference" class="btn btn-primary btn-lg">What Makes Us Different</a>
-        <a href="<?php echo BASE_URL; ?>/contact" class="btn btn-outline-primary btn-lg">Talk to a Specialist</a>
+        <a href="<?php echo BASE_URL; ?>/contact-us" class="btn btn-outline-primary btn-lg">Talk to a Specialist</a>
       </div>
 
       <div class="text-muted small mt-3">
@@ -21,13 +21,8 @@
 
     <div class="col-lg-5">
       <div class="bg-light rounded p-4 p-md-5 h-100">
-        <div class="text-uppercase small text-muted fw-semibold">Image Placeholder</div>
-        <div class="rounded mt-3" style="background-image:url('../images/placeholder-why-us-hero.webp'); height: 280px; background-size: cover; background-position: center;">
-          <!-- IMAGE PLACEHOLDER: buyers in front of new home / community exterior -->
+        <div class="rounded mt-3" style="background-image:url('../images/builders/priorityhomes/kitchen.webp'); height: 280px; background-size: cover; background-position: center;">
         </div>
-        <p class="text-muted small mt-3 mb-0">
-          Use a real photo from a walkthrough or model home tour for immediate credibility.
-        </p>
       </div>
     </div>
   </div>
@@ -37,22 +32,15 @@
 <section id="difference" class="container my-5">
   <div class="bg-white rounded shadow-sm p-4 p-md-5">
     <div class="row g-4 align-items-center">
-      <div class="col-lg-6">
+      <div class="col-lg-12">
         <h2 class="mb-3">We’re Not Generalists</h2>
         <p class="mb-3">
           Most agents do a little bit of everything. We focus on the part that confuses buyers most:
           <strong>new construction</strong>.
         </p>
         <p class="mb-0">
-          That means you get guidance built around builder contracts, timelines, selections, incentives, lot premiums, and build quality—not
-          resale habits that don’t apply.
+          That means you get guidance built around builder contracts, timelines, selections, incentives, lot premiums, and build quality.
         </p>
-      </div>
-
-      <div class="col-lg-6">
-        <div class="rounded" style="background-image:url('../images/placeholder-why-us-different.webp'); height: 300px; background-size: cover; background-position: center;">
-          <!-- IMAGE PLACEHOLDER: blueprint / floorplan + materials / model interior -->
-        </div>
       </div>
     </div>
   </div>
@@ -62,7 +50,16 @@
 <section class="container my-5">
   <div class="bg-light rounded p-4 p-md-5">
     <div class="row g-4 align-items-center">
-      
+
+      <div class="col-lg-6">
+        <div class="rounded"
+             style="background-image:url('../images/construction.webp');
+                    height: 320px;
+                    background-size: cover;
+                    background-position: center;">
+        </div>
+      </div>
+
       <div class="col-lg-6">
         <h2 class="mb-3">We Built Homes Long Before We Sold Them</h2>
         <p class="mb-3">
@@ -81,15 +78,6 @@
         </p>
       </div>
 
-      <div class="col-lg-6">
-        <div class="rounded"
-             style="background-image:url('../images/placeholder-construction-experience.webp');
-                    height: 320px;
-                    background-size: cover;
-                    background-position: center;">
-          <!-- IMAGE PLACEHOLDER: framing / jobsite / plans + tools / in-progress build -->
-        </div>
-      </div>
 
     </div>
   </div>
@@ -208,9 +196,7 @@
 
     <div class="col-lg-6">
       <div class="bg-light rounded p-4 p-md-5 h-100">
-        <div class="text-uppercase small text-muted fw-semibold">Image Placeholder</div>
-        <div class="rounded mt-3" style="background-image:url('../images/placeholder-pitfalls.webp'); height: 320px; background-size: cover; background-position: center;">
-          <!-- IMAGE PLACEHOLDER: selection studio / walkthrough checklist / contract table -->
+        <div class="rounded mt-3" style="background-image:url('../images/mtb-trail.webp'); height: 320px; background-size: cover; background-position: center;">
         </div>
 
         <div class="mt-4 bg-white rounded p-3">
@@ -224,50 +210,12 @@
   </div>
 </section>
 
-<!-- Transparency Section (Unique & Trust-Forward) -->
-<section class="container my-5">
-  <div class="bg-light rounded p-4 p-md-5">
-    <div class="row g-4 align-items-center">
-      <div class="col-lg-6">
-        <h2 class="mb-3">Transparency First</h2>
-        <p class="mb-3">
-          You should always know who represents who. We’ll be clear about whether we represent a builder/community directly or if we’re acting
-          as your buyer’s representative.
-        </p>
-
-        <div class="bg-white rounded p-3 mb-3">
-          <div class="fw-semibold mb-1">When we represent a community</div>
-          <div class="text-muted small">
-            We can provide fast updates on availability, pricing, timelines, and builder process details.
-          </div>
-        </div>
-
-        <div class="bg-white rounded p-3">
-          <div class="fw-semibold mb-1">When we don’t</div>
-          <div class="text-muted small">
-            We can still help you purchase new construction as your advocate where permitted and available, and we’ll disclose the relationship.
-          </div>
-        </div>
-
-        <p class="text-muted small mt-3 mb-0">
-          If you’re unsure, ask. We’d rather be over-clear than leave you guessing.
-        </p>
-      </div>
-
-      <div class="col-lg-6">
-        <div class="rounded" style="background-image:url('../images/placeholder-transparency-2.webp'); height: 340px; background-size: cover; background-position: center;">
-          <!-- IMAGE PLACEHOLDER: community sign / map / handshake -->
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- Proof / Credibility (Without Claims) -->
 <section class="container my-5">
   <div class="bg-white rounded shadow-sm p-4 p-md-5">
     <div class="row g-4 align-items-center">
-      <div class="col-lg-7">
+      <div class="col-lg-12">
         <h2 class="mb-3">What This Feels Like for Buyers</h2>
         <p class="mb-4">
           The goal isn’t to overwhelm you with info. It’s to help you feel confident at every step—especially when you’re making decisions fast.
@@ -301,19 +249,13 @@
         </div>
       </div>
 
-      <div class="col-lg-5">
-        <div class="text-uppercase small text-muted fw-semibold">Image Placeholder</div>
-        <div class="rounded mt-3" style="background-image:url('../images/placeholder-proof.webp'); height: 300px; background-size: cover; background-position: center;">
-          <!-- IMAGE PLACEHOLDER: happy family in doorway / keys close-up -->
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
 <!-- Bottom CTA -->
 <section class="py-5 mb-0 pb-0 bg-light">
-  <div class="container mb-0 pb-0">
+  <div class="container mb-5 pb-3">
     <div class="row g-4 align-items-center">
       <div class="col-lg-8">
         <h3 class="mb-2">Want help finding the right new construction home?</h3>
@@ -322,14 +264,10 @@
         </p>
       </div>
       <div class="col-lg-4 text-lg-end">
-        <a href="<?php echo BASE_URL; ?>/contact" class="btn btn-primary btn-lg mb-5">
+        <a href="<?php echo BASE_URL; ?>/contact-us" class="btn btn-primary btn-lg mb-5">
           Talk to a Specialist
         </a>
       </div>
     </div>
-
-    <p class="text-muted small">
-      Add brokerage name, license numbers, and required disclosures here.
-    </p>
   </div>
 </section>

@@ -50,7 +50,7 @@
           <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'home') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'new-construction-homes') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/new-construction-homes">New Construction Homes</a>
+          <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'new-homes') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/new-homes">New Homes</a>
         </li>
         <li class="nav-item">
           <a class="nav-link px-3 fw-medium <?php echo ($requestPath == 'how-it-works') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>/how-it-works">How it Works</a>

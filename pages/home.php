@@ -12,13 +12,13 @@
           With Confidence
         </h1>
         <p class="lead mt-4 mx-auto" style="max-width: 950px;">
-          We help buyers find and secure new construction across Utah—whether you are first-time buyer looking a move-in ready home for the best value or a buyer wanting the best builder to build your forever home.
+          We help find and secure new construction across Utah&nbsp;whether you are first-time buyer looking a move-in ready home wanting the best builder for your forever home. <br />
           Clear guidance. Fewer surprises. Better decisions.
         </p>
 
         <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
-          <a href="<?php echo BASE_URL; ?>/new-construction" class="btn btn-primary btn-lg">
-            Browse New Construction
+          <a href="<?php echo BASE_URL; ?>/new-homes" class="btn btn-primary btn-lg">
+            Browse New Homes
           </a>
           <a href="<?php echo BASE_URL; ?>/contact-us" class="btn btn-outline-light btn-lg">
             What Makes Us Different?
@@ -117,7 +117,7 @@
       <div class="col-md-4">
         <div class="bg-white rounded shadow-sm h-100 overflow-hidden">
           <div
-            style="background-image:url('../images/builders/reverehomes/spring_run.webp'); height: 190px; background-size: cover; background-position: center;"
+            style="background-image:url('../images/spring-run.webp'); height: 190px; background-size: cover; background-position: center;"
             aria-hidden="true">
           </div>
 
@@ -199,7 +199,7 @@
                 <i class="bi bi-rulers me-1"></i>Build From a Plan
               </span>
               <span class="badge text-bg-light border">
-                <i class="bi bi-clock me-1"></i>6–12+ Month Timeline
+                <i class="bi bi-clock me-1"></i>6–8+ Month Timeline
               </span>
             </div>
 
@@ -227,7 +227,7 @@
     <div class="mt-4 px-3 px-md-5">
       <div class="small text-muted text-center">
         Inventory changes fast and not all availability is published online.
-        We’ll confirm what’s available and send you a curated list based on your timeline, budget, and must-haves. <strong>Note:</strong> In some communities we may represent the builder, and in others we represent you as the buyer.
+        We’ll confirm what’s available and send you a curated list based on your timeline, budget, and must-haves. <strong>Note:</strong> In some communities we may also represent the builder, and in others we represent only you as the buyer.
       </div>
 
 </section>

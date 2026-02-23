@@ -2,69 +2,32 @@
 <section class="container my-5">
   <div class="row g-4 align-items-center">
     <div class="col-lg-7">
-      <h1 class="mb-3">New Construction Homes in Utah</h1>
+      <h1 class="mb-3">New Homes in Utah</h1>
       <p class="lead mb-4">
-        This page is built to help you <strong>shop smarter</strong>: understand the process, compare options, and request a curated list
-        based on your budget, timeline, and preferred cities.
+        This page is built to help you <strong>shop smarter</strong>: understand the process, compare options, and get info based on your budget, timeline, and location.
       </p>
 
       <div class="d-flex flex-column flex-sm-row gap-3">
-        <a href="#finder" class="btn btn-primary btn-lg">Use the Home Finder</a>
+        <a href="<?php echo BASE_URL; ?>/contact-us" class="btn btn-primary btn-lg">New Home Info</a>
         <a href="#featured" class="btn btn-outline-primary btn-lg">See Featured Community</a>
       </div>
 
       <div class="text-muted small mt-3">
         <i class="bi bi-info-circle me-1"></i>
-        Listing relationships vary by community. We clearly disclose when we represent a builder/community vs. act as a buyer’s representative.
+        Listing relationships vary by community. We disclose when we represent a builder/community vs. act as a buyer’s representative.
       </div>
     </div>
-
     <div class="col-lg-5">
-      <div class="bg-light rounded p-4 p-md-5 h-100">
-        <div class="text-uppercase small text-muted fw-semibold">Quick Request</div>
-        <h2 class="h4 mt-2 mb-3">Get a curated list</h2>
-        <p class="mb-4">
-          Tell us what you want and we’ll send options that fit—move-in ready and to-be-built.
-        </p>
-
-        <!-- Replace with your form handler -->
-        <form>
-          <div class="mb-3">
-            <label class="form-label small text-muted">Budget range</label>
-            <select class="form-select">
-              <option selected>Select a range</option>
-              <option>Under $400k</option>
-              <option>$400k–$500k</option>
-              <option>$500k–$650k</option>
-              <option>$650k+</option>
-            </select>
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label small text-muted">Timeline</label>
-            <select class="form-select">
-              <option selected>Select timeline</option>
-              <option>Move-in ready (0–60 days)</option>
-              <option>3–6 months</option>
-              <option>6–12 months (to-be-built)</option>
-              <option>Just researching</option>
-            </select>
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label small text-muted">Cities</label>
-            <input class="form-control" placeholder="Eagle Mountain, Salem, Santaquin..." />
-          </div>
-
-          <div class="d-grid">
-            <a href="<?php echo BASE_URL; ?>/contact" class="btn btn-primary btn-lg">Request Options</a>
-          </div>
-
-          <div class="text-muted small mt-3">
-            Brokerage/disclosure text can go here.
-          </div>
-        </form>
+    <div class="ratio ratio-16x9">
+      <div
+        class="rounded w-100 h-100"
+        style="
+          background-image: url('../images/new-construction.webp');
+          background-size: cover;
+          background-position: center;
+        ">
       </div>
+    </div>
     </div>
   </div>
 </section>
@@ -140,7 +103,7 @@
         </div>
 
         <div class="mt-4 d-flex flex-column flex-sm-row gap-2">
-          <a href="<?php echo BASE_URL; ?>/contact" class="btn btn-primary">Ask a Question</a>
+          <a href="<?php echo BASE_URL; ?>/contact-us" class="btn btn-primary">Ask a Question</a>
           <a href="#faq" class="btn btn-outline-primary">Read Buyer FAQ</a>
         </div>
       </div>
@@ -153,11 +116,10 @@
   <div class="bg-light rounded p-4 p-md-5">
     <div class="row g-4 align-items-center">
       <div class="col-lg-6">
-        <div class="text-uppercase small text-muted fw-semibold">Featured Community</div>
-        <h2 class="mb-2">Spring Run Park (Eagle Mountain)</h2>
+        <div class="text-uppercase text-center small text-muted fw-semibold">Featured Community</div>
+        <h2 class="mb-2">Spring Run Park</h2>
         <p class="mb-4">
-          Our current featured community is Spring Run Park by Revere Homes. If you want the fastest updates on availability, pricing,
-          and tour options—start here.
+          Our current featured community is Spring Run Park by Revere Homes in Eagle Mountain, UT. If you want the fastest updates on availability, pricing, and tour options—start here.
         </p>
 
         <div class="d-flex flex-column flex-sm-row gap-3">
@@ -171,7 +133,7 @@
       </div>
 
       <div class="col-lg-6">
-        <div class="rounded" style="background-image:url('../images/placeholder-community-1.webp'); height: 320px; background-size: cover; background-position: center;">
+        <div class="rounded" style="background-image:url('../images/builders/reverehomes/spring_run.webp'); height: 320px; background-size: cover; background-position: center;">
           <!-- IMAGE PLACEHOLDER -->
         </div>
       </div>
@@ -199,7 +161,7 @@
           </h2>
           <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
             <div class="accordion-body">
-              Often, the builder pays the buyer’s agent fee. Policies vary by builder and by how/when you register at the model home.
+              The builder pays the buyer’s agent fee. Policies vary by builder and by how/when you register at the model home.
               We’ll explain the cleanest way to proceed for the community you’re considering.
             </div>
           </div>
@@ -220,20 +182,6 @@
         </div>
 
         <div class="accordion-item">
-          <h2 class="accordion-header" id="q3">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">
-              When should inspections happen on a new build?
-            </button>
-          </h2>
-          <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
-            <div class="accordion-body">
-              Many buyers choose a standard pre-close inspection, and some add phase inspections (like pre-drywall) when available.
-              We’ll help you time this based on your builder’s process and schedule.
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
           <h2 class="accordion-header" id="q4">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4">
               Can I use my own lender?
@@ -248,25 +196,5 @@
 
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Bottom CTA (Different structure from homepage) -->
-<section class="py-5 mb-4 pb-2 bg-light">
-  <div class="container mb-0 pb-0">
-    <div class="row g-4 align-items-center">
-      <div class="col-lg-8">
-        <h3 class="mb-2">Want options that actually fit?</h3>
-        <p class="mb-0">
-          Send your budget, timeline, and preferred cities—we’ll reply with a curated list of new construction options and clear next steps.
-        </p>
-      </div>
-      <div class="col-lg-4 text-lg-end">
-        <a href="<?php echo BASE_URL; ?>/contact" class="btn btn-primary btn-lg mb-5">
-          Request a Curated List
-        </a>
-      </div>
-    </div>
-
   </div>
 </section>
