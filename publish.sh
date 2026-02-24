@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define source and destination
-SRC="/Users/kemish/Sites/thekatalystgroup/"
+SRC="/Users/kemish/Sites/thekatalyst.group/"
 DEST="kemish@thekatalyst.group:/opt/bitnami/apache2/htdocs"
 
 # Run rsync with options:
@@ -11,4 +11,4 @@ DEST="kemish@thekatalyst.group:/opt/bitnami/apache2/htdocs"
 # -h = human-readable output
 # --delete = delete files on the destination that no longer exist on source
 
-rsync -avzh --delete --exclude=".git" --exclude="node_modules" --exclude="*.log" --exclude="builders" "$SRC" "$DEST"
+rsync -avzh --delete --exclude=".git" --exclude="node_modules" --exclude="*.log" "$SRC" "$DEST"
