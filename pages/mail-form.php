@@ -6,54 +6,83 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-$website = trim($_POST['website'] ?? ''); // honeypot
-$name    = trim($_POST['name'] ?? '');
-$email   = trim($_POST['email'] ?? '');
-$phone   = trim($_POST['phone'] ?? '');
-$city    = trim($_POST['city'] ?? '');
-$messageText = trim($_POST['message'] ?? '');
-
-// Basic validation
+/* -----------------------------
+   Honeypot
+----------------------------- */
+$website = trim($_POST['website'] ?? '');
 if ($website !== '') {
-    $message = "Message could not be sent.";
-} elseif ($name === '' || $email === '' || $messageText === '') {
-    $message = "Message could not be sent.";
-} elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $message = "Message could not be sent.";
+    header("Location: /?status=success");
+    exit;
+}
+
+/* -----------------------------
+   Normalize Name
+----------------------------- */
+$nameParts = [];
+
+if (!empty($_POST['name'])) {
+    $nameParts[] = trim($_POST['name']);
 } else {
-    try {
-
-        // Email from
-        $mail->setFrom(CONTACT_EMAIL, "TKG Website");
-        $mail->addAddress(CONTACT_EMAIL);
-        $mail->addReplyTo($email, $name);
-
-        // Content
-        $mail->isHTML(true);
-        $mail->Subject = "Website contact inquiry";
-        $mail->Body =
-            "From: " . htmlspecialchars($name) . "<br>" .
-            "Email: " . htmlspecialchars($email) . "<br>" .
-            "Phone: " . htmlspecialchars($phone) . "<br>" .
-            "City: " . htmlspecialchars($city) . "<br>" .
-            "Message:<br>" . nl2br(htmlspecialchars($messageText));
-
-        $mail->send();
-        $message = 'Message has been sent';
-    } catch (Exception $e) {
-        // Optional: log the real error so you're not blind
-        error_log("Mail error: " . $mail->ErrorInfo);
-        $message = "Message could not be sent.";
+    if (!empty($_POST['first_name'])) {
+        $nameParts[] = trim($_POST['first_name']);
+    }
+    if (!empty($_POST['last_name'])) {
+        $nameParts[] = trim($_POST['last_name']);
     }
 }
 
-header("Location: /?status=success");
-exit;
-?>
-<br><br><br><br>
-<div class="row my-5">
-  <div class="col-md-12">
-    <p class="display-4 text-center">Your <?php echo htmlspecialchars($message); ?></p>
-  </div>
-</div>
-<br><br><br><br>
+$name = trim(implode(' ', $nameParts));
+
+/* -----------------------------
+   Other Fields
+----------------------------- */
+$email       = trim($_POST['email'] ?? '');
+$phone       = trim($_POST['phone'] ?? '');
+$city        = trim($_POST['city'] ?? '');
+$messageText = trim($_POST['message'] ?? '');
+
+/* -----------------------------
+   Basic Validation
+----------------------------- */
+if ($name === '' || $email === '' || $messageText === '') {
+    header("Location: /?status=error");
+    exit;
+}
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    header("Location: /?status=error");
+    exit;
+}
+
+/* -----------------------------
+   Build Email + SMS Content
+----------------------------- */
+$subject = "Website contact inquiry";
+
+$html =
+    "From: " . htmlspecialchars($name) . "<br>" .
+    "Email: " . htmlspecialchars($email) . "<br>" .
+    ($phone !== '' ? "Phone: " . htmlspecialchars($phone) . "<br>" : '') .
+    ($city !== '' ? "City: " . htmlspecialchars($city) . "<br>" : '') .
+    "Message:<br>" . nl2br(htmlspecialchars($messageText));
+
+$sms =
+    "🔥 NEW CONTACT\n" .
+    "{$name}\n" .
+    ($phone !== '' ? "📞 {$phone}\n" : '') .
+    "✉ {$email}\n" .
+    ($city !== '' ? "🏙 {$city}\n" : '') .
+    "💬 " . substr($messageText, 0, 200);
+
+/* -----------------------------
+   Send Notifications
+----------------------------- */
+try {
+    tkg_notify($email, $name, $subject, $html, $sms);
+    header("Location: /?status=success");
+    exit;
+} catch (Exception $e) {
+    error_log("Mail error: " . $e->getMessage());
+    header("Location: /?status=error");
+    exit;
+}

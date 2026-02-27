@@ -1,0 +1,5 @@
+<?php
+return [
+  'pixel_id' => '26293736610250920',
+  'access_token' => 'EAAReafE9y74BQ9e39CBFs4b7TVpYecNNQikhgZBElZAy6oIqdfsUdaWQZAxXxDVxVlaw0WsqoZCZB8m9t7MP7LvW8AQZBfSimpZBxF6B9nolli2mEZAViXRZAqg8KS7ryrgdkdZBpyfo33NP8LsNCZBsZAvtC0Pk8iQQs1YL8hTPZCZCQr1MtNhTrQIkik8zbKcS3pCeP2ZAQZDZD',
+];

@@ -1,3 +1,28 @@
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s);
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', 'YOUR_PIXEL_ID_HERE');   // <-- add your Pixel ID
+fbq('track', 'PageView');
+fbq('track', 'ViewContent');         // optional but recommended
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+       src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
+
 <!-- HERO (above the fold) -->
 <section
     class="hero d-flex align-items-end"
@@ -24,7 +49,7 @@
         <p class="lead mb-3">Santa Anna • 2-Story • 4 Beds • 2.5 Baths • 2,958 Sq Ft • 2-Car Garage</p>
 
         <div class="d-flex flex-wrap align-items-center gap-3">
-          <div class="fs-2 fw-bold">$559,900</div>
+          <div class="fs-2 fw-bold">$554,900</div>
           <div class="text-white-50">($189 / Sq Ft)</div>
         </div>
 
@@ -57,7 +82,7 @@
               <div class="col-md-6">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item bg-transparent px-0 d-flex justify-content-between">
-                    <span class="text-muted">Price</span><span class="fw-semibold">$559,900</span>
+                    <span class="text-muted">Price</span><span class="fw-semibold">$554,900</span>
                   </li>
                   <li class="list-group-item bg-transparent px-0 d-flex justify-content-between">
                     <span class="text-muted">Beds</span><span class="fw-semibold">4</span>
@@ -149,7 +174,7 @@
               <!-- Hidden context -->
               <input type="hidden" name="listingAddress" value="3350 E Baywater, Eagle Mountain, UT 84005">
               <input type="hidden" name="mlsNumber" value="2129337">
-              <input type="hidden" name="listingPrice" value="559900">
+              <input type="hidden" name="listingPrice" value="554900">
 
               <button type="submit" class="btn btn-warning w-100 btn-lg">Send</button>
 
@@ -245,15 +270,14 @@
       <h2 class="h4 mb-3">Video Tour</h2>
       <div class="card shadow-sm border-0">
         <div class="card-body p-3">
-          <!-- Replace VIDEO_ID with your YouTube id -->
-            <div class="ratio ratio-16x9">
+          <div class="ratio ratio-16x9">
             <iframe
-                src="https://www.youtube-nocookie.com/embed/ZuVqa1Q-1Yg"
-                title="YouTube video tour"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
+              src="https://www.youtube-nocookie.com/embed/ZuVqa1Q-1Yg"
+              title="YouTube video tour"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
             ></iframe>
-            </div>        
+          </div>        
         </div>
       </div>
     </section>
@@ -345,7 +369,6 @@
           </div>
         </div>
       </div>
-
     </section>
 
   </div>
@@ -368,7 +391,6 @@
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
 
-      // Bootstrap validation styling
       if (!form.checkValidity()) {
         e.stopPropagation();
         form.classList.add('was-validated');
@@ -381,22 +403,34 @@
       const payload = Object.fromEntries(new FormData(form).entries());
 
       try {
-        // Replace with your backend endpoint that forwards to Less Annoying CRM.
-        // Example: /api/lead (Netlify Function, Vercel Serverless, AWS Lambda, etc.)
         const res = await fetch('/protected/api/lead.php', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
+          body: JSON.stringify(payload),
+          credentials: 'same-origin'
         });
 
-        if (!res.ok) {
-          const text = await res.text();
-          throw new Error(text || 'Request failed');
+        const text = await res.text();
+        let data = {};
+        try { data = JSON.parse(text); } catch (_) {}
+
+        if (!res.ok || !data.ok) {
+          const msg = (data && data.error) ? data.error : (text || 'Request failed');
+          throw new Error(msg);
+        }
+
+        // Dedupe with server-side CAPI using the returned event_id
+        if (window.fbq && data.event_id) {
+          fbq('track', 'Lead', {}, { eventID: data.event_id });
+        } else if (window.fbq) {
+          // fallback (shouldn't happen if endpoint returns event_id)
+          fbq('track', 'Lead');
         }
 
         form.reset();
         form.classList.remove('was-validated');
         setStatus('Thanks! We received your request and will reach out shortly.', 'success');
+
       } catch (err) {
         console.error(err);
         setStatus('Sorry — something went wrong. Please call/text 208-250-2488.', 'error');

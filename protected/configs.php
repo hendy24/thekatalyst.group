@@ -1,51 +1,93 @@
 <?php
 declare(strict_types=1);
 
-// ───────────────────────────────────────────────────────────────────────────────
-// 1) BASE CONSTANTS
-// ───────────────────────────────────────────────────────────────────────────────
-define('DOC_ROOT',           realpath($_SERVER['DOCUMENT_ROOT']) ?: '');
-define('BASE_URL',           rtrim(
-    (
-        // behind proxies?
-        (!empty($_SERVER['HTTP_X_FORWARDED_PROTO'])
-            ? $_SERVER['HTTP_X_FORWARDED_PROTO']
-            : (($_SERVER['HTTPS'] ?? 'off') !== 'off' || $_SERVER['SERVER_PORT'] == 443
-                ? 'https'
-                : 'http')
-        )
-        . '://' . ($_SERVER['HTTP_HOST'] ?? '')
-    ),
-    '/'
-));
-define('IMAGES', BASE_URL . '/images');
+/* ─────────────────────────────────────────────────────────────
+   1) BASE CONSTANTS
+───────────────────────────────────────────────────────────── */
 
-// ───────────────────────────────────────────────────────────────────────────────
-// 2) REQUEST SLUG (no “.php” or “.json” — let your front-controller decide)
-// ───────────────────────────────────────────────────────────────────────────────
+if (!defined('DOC_ROOT')) {
+    define('DOC_ROOT', realpath($_SERVER['DOCUMENT_ROOT'] ?? '') ?: '');
+}
+
+if (!defined('BASE_URL')) {
+    $scheme = 'http';
+
+    if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO'])) {
+        $scheme = $_SERVER['HTTP_X_FORWARDED_PROTO'];
+    } elseif (
+        (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ||
+        (($_SERVER['SERVER_PORT'] ?? 80) == 443)
+    ) {
+        $scheme = 'https';
+    }
+
+    $host = $_SERVER['HTTP_HOST'] ?? '';
+
+    define('BASE_URL', rtrim($scheme . '://' . $host, '/'));
+}
+
+if (!defined('IMAGES')) {
+    define('IMAGES', BASE_URL . '/images');
+}
+
+/* ─────────────────────────────────────────────────────────────
+   2) REQUEST SLUG (no .php / .json)
+───────────────────────────────────────────────────────────── */
+
 $rawPath = parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH) ?: '/';
-$slug    = trim($rawPath, '/');           // "/about/team/" → "about/team"
-$slug    = basename($slug) ?: 'home';      // keep only last segment, default to home
-// sanitize to letters, numbers, dash, underscore
+$slug    = trim($rawPath, '/');
+$slug    = basename($slug) ?: 'home';
 $page    = preg_replace('/[^a-zA-Z0-9_-]/', '', $slug);
 
-// expose $page for index.php
-// ───────────────────────────────────────────────────────────────────────────────
+/* ─────────────────────────────────────────────────────────────
+   3) SITE-SPECIFIC SETTINGS
+───────────────────────────────────────────────────────────── */
 
-// ───────────────────────────────────────────────────────────────────────────────
-// 3) SITE-SPECIFIC SETTINGS
-// ───────────────────────────────────────────────────────────────────────────────
-define('COMPANY_NAME',       'TheKatalystGroup');
-define('COMPANY_PHONE',      '(385) 323-2290');
-define('CONTACT_EMAIL',      'admin@thekatalyst.group');
+if (!defined('COMPANY_NAME')) {
+    define('COMPANY_NAME', 'TheKatalystGroup');
+}
 
-define('TWILIO_FROM', '+15551234567'); // your Twilio number
-define('NOTIFY_TO', '+13853232290');   // your cell number
+if (!defined('COMPANY_PHONE')) {
+    define('COMPANY_PHONE', '(385) 323-2290');
+}
 
-// ───────────────────────────────────────────────────────────────────────────────
-// 4) (Optional) Environment & debug flags
-// ───────────────────────────────────────────────────────────────────────────────
+if (!defined('CONTACT_EMAIL')) {
+    define('CONTACT_EMAIL', 'admin@thekatalyst.group');
+}
+
+if (!defined('LACRM_API_KEY')) {
+  $k = getenv('LACRM_API_KEY');
+  if ($k === false || trim($k) === '') {
+    $k = ''; // optional fallback: paste key here if you insist (not ideal)
+  }
+  define('LACRM_API_KEY', trim((string)$k));
+}
+
+if (!defined('LACRM_ASSIGNED_TO')) {
+    define('LACRM_ASSIGNED_TO', getenv('LACRM_ASSIGNED_TO') ?: '');
+}
+
+if (!defined('SEND_TO_EMAIL')) {
+    define('SEND_TO_EMAIL', [
+        'admin@thekatalyst.group',
+    ]);
+}
+
+if (!defined('SEND_TO_SMS')) {
+    define('SEND_TO_SMS', [
+        '2082502488@txt.att.net',
+        '3857895030@txt.att.net',
+    ]);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   4) ENVIRONMENT & DEBUG
+───────────────────────────────────────────────────────────── */
+
 if (!defined('APP_ENV')) {
     define('APP_ENV', getenv('APP_ENV') ?: 'production');
 }
-define('DEBUG', APP_ENV !== 'production');
+
+if (!defined('DEBUG')) {
+    define('DEBUG', APP_ENV !== 'production');
+}
