@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $website = trim($_POST['website'] ?? ''); // honeypot
 $name    = trim($_POST['name'] ?? '');
 $email   = trim($_POST['email'] ?? '');
+$phone   = trim($_POST['phone'] ?? '');
 $city    = trim($_POST['city'] ?? '');
 $messageText = trim($_POST['message'] ?? '');
 
@@ -33,6 +34,7 @@ if ($website !== '') {
         $mail->Body =
             "From: " . htmlspecialchars($name) . "<br>" .
             "Email: " . htmlspecialchars($email) . "<br>" .
+            "Phone: " . htmlspecialchars($phone) . "<br>" .
             "City: " . htmlspecialchars($city) . "<br>" .
             "Message:<br>" . nl2br(htmlspecialchars($messageText));
 
@@ -45,7 +47,8 @@ if ($website !== '') {
     }
 }
 
-header("refresh:5;url=home");
+header("Location: /?status=success");
+exit;
 ?>
 <br><br><br><br>
 <div class="row my-5">

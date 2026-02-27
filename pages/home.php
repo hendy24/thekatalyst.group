@@ -315,18 +315,19 @@
               <h4 class="h5 mb-3">Contact Form</h4>
 
               <!-- Replace action/method with your form handler -->
-              <form>
+              <form method="POST" action="/pages/mail-form.php">
+                <input type="text" name="website" style="display:none">
                 <div class="mb-3">
-                  <input type="text" class="form-control" placeholder="Name">
+                  <input type="text" name="name" class="form-control" placeholder="Name" required>
                 </div>
                 <div class="mb-3">
-                  <input type="email" class="form-control" placeholder="Email">
+                  <input type="email" name="email" class="form-control" placeholder="Email" required>
                 </div>
                 <div class="mb-3">
-                  <input type="tel" class="form-control" placeholder="Phone (optional)">
+                  <input type="tel" name="phone" class="form-control" placeholder="Phone (optional)">
                 </div>
                 <div class="mb-3">
-                  <textarea class="form-control" rows="4" placeholder="What are you looking for?"></textarea>
+                  <textarea class="form-control" name="message" rows="4" placeholder="What are you looking for?"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary w-100 btn-lg">Send My Request</button>
               </form>
