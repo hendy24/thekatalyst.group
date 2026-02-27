@@ -117,11 +117,6 @@
             <h2 class="h5 mb-1">Request Info / Showing</h2>
             <p class="text-muted small mb-3">We’ll reach out quickly with availability and details.</p>
 
-            <!--
-              IMPORTANT:
-              Do NOT call Less Annoying CRM directly from the browser (you'd expose your API key).
-              This form posts to /api/lead. Implement that endpoint server-side to forward to Less Annoying CRM.
-            -->
             <form id="leadForm" class="needs-validation" novalidate>
               <div class="mb-3">
                 <label for="firstName" class="form-label">First name</label>

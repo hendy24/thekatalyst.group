@@ -1,4 +1,4 @@
-<form id="contact-form" class="needs-validation bg-white p-4 p-md-5 rounded shadow-sm" action="mail-form" novalidate>
+<form id="contact-form" class="needs-validation bg-white p-4 p-md-5 rounded shadow-sm" action="mail-form" method="post" novalidate>
     <div class="mb-4">
         <label for="name" class="form-label fw-semibold">Name</label>
         <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Your Name" required>
