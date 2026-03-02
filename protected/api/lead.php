@@ -17,10 +17,12 @@ require_once __DIR__ . '/../sendEmail.php';
    return ['pixel_id' => '123...', 'access_token' => 'EAAB...'];
 ----------------------------- */
 $META = null;
-$metaPath = __DIR__ . '/../protected/meta_openhouse.php'; // <-- ADJUST if needed
+$metaPath = __DIR__ . '/../meta_openhouse.php'; // <-- ADJUST if needed
 if (is_file($metaPath)) {
   $tmp = require $metaPath;
   if (is_array($tmp)) $META = $tmp;
+} else {
+  error_log("Meta config not found at: {$metaPath}");
 }
 
 /* -----------------------------
@@ -356,6 +358,7 @@ try {
     if (!$metaResp['ok']) {
       error_log("Meta CAPI error (HTTP {$metaResp['http']}): {$metaResp['resp']}");
     }
+
   }
 
   $subject = "New lead" . ($mlsNumber !== '' ? " (MLS {$mlsNumber})" : '');

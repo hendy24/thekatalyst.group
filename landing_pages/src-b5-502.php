@@ -12,7 +12,7 @@ s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s);
 }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', 'YOUR_PIXEL_ID_HERE');   // <-- add your Pixel ID
+fbq('init', '26293736610250920');   // <-- add your Pixel ID
 fbq('track', 'PageView');
 fbq('track', 'ViewContent');         // optional but recommended
 </script>
